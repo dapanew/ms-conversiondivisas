@@ -1,43 +1,32 @@
+# Prueba BBVA - Construcción de Microservicios con Spring Boot
 
-# Prueba BBVA Construcion de Microservicios con Spring Boot
-# ms-conversiondivisas
+## 1. Inicialización del Microservicio
+- **Esqueleto creado con**: [Spring Initializr](https://start.spring.io/)
+- **Versión de Java**: 21
+- **Versión de Spring Boot**: 3.2.0
 
-#1. Inicializador microservicio
-esqueleto creado  con Spring Initializr: https://start.spring.io/
-version de java 21
-Spring Boot 3.2.0
+## 2. Configuración del Proyecto
+### Gestor de Dependencias
+- **Maven**
 
-##2. Maven como gestor de dependencias
-Dependencias:
-Spring Web
-Lombok				-> Simplifica el código Java reduciendo la necesidad de escribir código repetitivo
-Validation			-> Permite validar objetos Java (como DTOs o entidades)
-Spring Boot DevTools-> Herramientas de desarrollo que mejoran la productividad, como reinicio automático de la aplicación al detectar cambios 
-logstash			-> Facilita el envío de logs estructurados (en formato JSON)
-openfeign			-> Cliente HTTP declarativo para consumir APIs REST (como un cliente REST simplificado).
-springdoc			-> Genera documentación automática de APIs REST usando OpenAPI 3 (Swagger UI integrado).
+### Dependencias Principales
+| Dependencia               | Descripción                                                                 |
+|---------------------------|-----------------------------------------------------------------------------|
+| **Spring Web**            | Para construir aplicaciones web y APIs REST.                                |
+| **Lombok**                | Simplifica el código reduciendo boilerplate (getters, setters, constructores). |
+| **Validation**            | Validación de objetos Java (DTOs/entidades) con anotaciones como `@NotNull`. |
+| **Spring Boot DevTools**  | Herramientas de desarrollo (reinicio automático, configuración para dev).   |
+| **Logstash**              | Envío de logs estructurados en JSON a sistemas como ELK.                    |
+| **OpenFeign**             | Cliente HTTP declarativo para consumir APIs REST.                           |
+| **SpringDoc**             | Genera documentación automática de APIs (OpenAPI 3 + Swagger UI).           |
 
-##3. Herramientas de trabajo
-VS Code: https://code.visualstudio.com/download
+## 3. Herramientas de Desarrollo
+- **IDE Principal**: [VS Code](https://code.visualstudio.com/download)
 
-
-Validar compilación:
+### Comandos Útiles
+```bash
+# Validar compilación
 mvn clean compile
-Validar empaquetado:
+
+# Generar empaquetado (JAR)
 mvn clean package
-
-##4. Desarrollar microservicio
-Estructura Carpetas: 
-
-### Dominio:
-dto: Objetos de transferencia de datos
-
-### Aplicación:
-
-exceptions: Excepciones personalizadas
-service: Interfaces de servicio e implementación, logica de negocio consumo de API,conversion de Divisa 
-
-###Infraestructura:
-
-controller: Controladores REST exposicion de operaciones 
-config: Configuraciones
