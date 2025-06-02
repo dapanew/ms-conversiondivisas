@@ -47,3 +47,9 @@ src/
 │   └── resources/
 │       └── application.properties  # Configuración de la aplicación
 ```
+## 5. OpenAPI
+- ** Configurar Springdoc: basica. 
+
+- ** Probar API: Acceder a http://localhost:8080/swagger-ui/index.html
+
+## 6. Logstash: para generar logs en formato json. 
