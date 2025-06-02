@@ -30,3 +30,18 @@ mvn clean compile
 
 # Generar empaquetado (JAR)
 mvn clean package
+
+## 4. Estructura del Proyecto
+src/
+├── main/
+│   ├── java/
+│   │   ├── dominio/
+│   │   │   └── dto/                # Objetos de transferencia de datos
+│   │   ├── aplicacion/
+│   │   │   ├── exceptions/         # Excepciones personalizadas
+│   │   │   └── service/            # Lógica de negocio y consumo de APIs
+│   │   └── infraestructura/
+│   │       ├── controller/         # Controladores REST
+│   │       └── config/             # Configuraciones globales
+│   └── resources/
+│       └── application.properties  # Configuración de la aplicación
