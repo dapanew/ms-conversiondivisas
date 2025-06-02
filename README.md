@@ -30,7 +30,7 @@ mvn clean compile
 
 # Generar empaquetado (JAR)
 mvn clean package
-
+```
 ## 4. Estructura del Proyecto
 src/
 ├── main/
