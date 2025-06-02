@@ -7,7 +7,7 @@ esqueleto creado  con Spring Initializr: https://start.spring.io/
 version de java 21
 Spring Boot 3.2.0
 
-## 2.Maven como gestor de dependencias
+##2. Maven como gestor de dependencias
 Dependencias:
 Spring Web
 Lombok				-> Simplifica el código Java reduciendo la necesidad de escribir código repetitivo
@@ -17,7 +17,7 @@ logstash			-> Facilita el envío de logs estructurados (en formato JSON)
 openfeign			-> Cliente HTTP declarativo para consumir APIs REST (como un cliente REST simplificado).
 springdoc			-> Genera documentación automática de APIs REST usando OpenAPI 3 (Swagger UI integrado).
 
-## 3. Herramientas de trabajo
+##3. Herramientas de trabajo
 VS Code: https://code.visualstudio.com/download
 
 
@@ -29,10 +29,10 @@ mvn clean package
 ##4. Desarrollar microservicio
 Estructura Carpetas: 
 
-###Dominio:
+### Dominio:
 dto: Objetos de transferencia de datos
 
-###Aplicación:
+### Aplicación:
 
 exceptions: Excepciones personalizadas
 service: Interfaces de servicio e implementación, logica de negocio consumo de API,conversion de Divisa 
