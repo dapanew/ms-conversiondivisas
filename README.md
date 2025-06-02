@@ -32,6 +32,7 @@ mvn clean compile
 mvn clean package
 ```
 ## 4. Estructura del Proyecto
+```bash
 src/
 ├── main/
 │   ├── java/
@@ -45,3 +46,4 @@ src/
 │   │       └── config/             # Configuraciones globales
 │   └── resources/
 │       └── application.properties  # Configuración de la aplicación
+```
