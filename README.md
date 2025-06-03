@@ -53,7 +53,7 @@ src/
 - ** Probar API: Acceder a http://localhost:8080/swagger-ui/index.html
 
 ## 6. Logstash: 
-- ** para generar logs en formato json, luego hacer una estrategia de monitoreo como grafana. 
+- ** Generacion de  logs en formato json, para luego hacer una estrategia de monitoreo como grafana. 
 
 ## 7. Pruebas con Postman
 - ** Importar en Postman: https://www.postman.com/downloads/ para hacer Pruebas: en la carpeta postman se encuentra el archivo test_bbva divisas.postman_collection que tiene la descripcion,
