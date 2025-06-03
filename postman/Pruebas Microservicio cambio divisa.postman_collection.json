@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "3aa788ce-7bbd-4d2c-9880-b6176787a666",
+		"name": "Pruebas Microservicio cambio divisa",
+		"description": "# 🚀 Get started here\n\n## 1\\. Introducción\n\nEste microservicio proporciona funcionalidades para:\n\n- Convertir montos entre diferentes monedas\n    \n- Este es un template para las operaciones (GET, POST) que tiene el micro: \"MS-CONVERSIONDIVISAS\"\n    \n\n## 🔖 Como usar este **template**\n\nendpoint base: [http://localhost:8080](http://localhost:8080)\n\n#### **Step 1: Operacion GetHelp**\n\nEsta operacion de tipo GET se utiliza para validar el estado del microservicio, respondiendo al path raiz(/).  \nendpoint invocado: [http://localhost:8080/](http://localhost:8080/)\n\nResponse : Microservicio de conversion de divisas en ejecución correctamente\n\n#### **Step 2: Operacion PostConversionDivisa**\n\nEsta operacion de tipo POST es la principal, se utiliza para hacer la conversion de la divisa  \nejemplo del request que se debe enviar:\n\n```\n{\n    \"monto\": 456,\n    \"monedaOrigen\": \"DJF\",\n    \"monedaDestino\": \"EUR\"\n}\n\n ```\n\nResponse:Status 200\n\n```\n{\n    \"fechaConversion\": \"2025-06-02T21:49:56.0014074\",\n    \"tasaConversion\": 0.004927,\n    \"montoOriginal\": 456,\n    \"montoConvertido\": 2.25\n}\n\n ```\n\n## 💡Related templates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42992711"
+	},
+	"item": [
+		{
+			"name": "GetHelp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/info?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "PostConversionDivisa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 10,\n    \"fromCurrency\": \"SD\",\n    \"toCurrency\": \"jUR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"convert"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}

@@ -4,22 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
-import java.time.LocalDate;
-
-//import com.fasterxml.jackson.annotation.JsonFormat;
-
+import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class ConversionResponseDTO {
-     //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 
-    private LocalDate fechaConversion;
+    private LocalDateTime fechaConversion;
     private BigDecimal tasaConversion;
     private BigDecimal montoOriginal;
     private BigDecimal montoConvertido;
-
-
-
-
 }

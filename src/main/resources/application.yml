@@ -1,10 +1,8 @@
-server:
-  port: 8080
 exchange:
   rate:
     api:
-      url: http://api.exchangeratesapi.io/v1
-      key: 10124780aa73c83cd1e5b667cf8af774
+      url: http://api.exchangeratesapi.io/v1 # URL del API de tasas de cambio
+      key: 10124780aa73c83cd1e5b667cf8af774 # Clave de API para autenticación
       logging:
   logstash:
     host: localhost  # o la IP de tu servidor Logstash
