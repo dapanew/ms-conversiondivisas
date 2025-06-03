@@ -1,4 +1,4 @@
-# Prueba BBVA - Construcción de Microservicio con Spring Boot
+# Prueba BBVA - Construcción de Microservicio:  ms-conversiondivisa con Spring Boot
 
 ## 1. Inicialización del Microservicio
 - **Esqueleto creado con**: [Spring Initializr](https://start.spring.io/)
@@ -53,7 +53,7 @@ src/
 - ** Probar API: Acceder a http://localhost:8080/swagger-ui/index.html
 
 ## 6. Logstash: 
-- ** para generar logs en formato json, luego hacer una estrategia de monitoreo como grafana. 
+- ** Generacion de  logs en formato json, para luego hacer una estrategia de monitoreo como grafana. 
 
 ## 7. Pruebas con Postman
 - ** Importar en Postman: https://www.postman.com/downloads/ para hacer Pruebas: en la carpeta postman se encuentra el archivo test_bbva divisas.postman_collection que tiene la descripcion,
