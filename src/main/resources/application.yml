@@ -1,0 +1,11 @@
+server:
+  port: 8080
+exchange:
+  rate:
+    api:
+      url: http://api.exchangeratesapi.io/v1
+      key: 10124780aa73c83cd1e5b667cf8af774
+      logging:
+  logstash:
+    host: localhost  # o la IP de tu servidor Logstash
+    port: 5000       # puerto común para Logstash TCP input
