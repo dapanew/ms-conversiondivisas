@@ -1,4 +1,4 @@
-# Prueba BBVA - Construcción de Microservicio:  ms-conversiondivisa con Spring Boot
+# Construcción de Microservicio:  ms-conversiondivisa con Spring Boot
 
 ## 1. Inicialización del Microservicio
 - **Esqueleto creado con**: [Spring Initializr](https://start.spring.io/)
